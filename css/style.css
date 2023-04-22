@@ -166,3 +166,36 @@ header{
 .logo{
     height: 46px;
 }
+
+.features-section{
+    
+    padding: 80px var(--padding-inline-section) 0;
+}
+
+.features-header{
+    text-align: center;
+}
+
+.features-heading-text{
+    margin-bottom: 20px;
+}
+
+.features-area{
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.features-card{
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.features-card img{
+    height: 20vh;
+    
+    
+}
