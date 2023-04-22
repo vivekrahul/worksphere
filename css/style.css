@@ -172,6 +172,8 @@ header{
     padding: 80px var(--padding-inline-section) 0;
 }
 
+
+
 .features-header{
     text-align: center;
 }
@@ -223,93 +225,132 @@ header{
     gap: 20px;
 }
 
+
+
 .FAQs-card{
+
     width: 23%;
     position: relative;
     min-height: 300px;
-    background: black;
+    background: rgb(24, 24, 24);
+    border-radius: 15px;
+    background: linear-gradient(to bottom , black, rgb(77, 74, 74));
 }
 
 .card-text{
+    margin: 10px;
+ 
     
     position: relative;
-   
-    top:10px;
-    left: 20px;
-    right: 30px;
+   text-align: center;
+    
+    
     color: white;
 
 }
 
 .card-text1{
     position: relative;
-    top:10px;
+    margin: 10px;
+    text-align: center;
     
-    left: 5px;
-    right: 10px;
     color: white;
 }
 
 .card-text2{
     position: relative;
-    top:10px;
+    margin: 10px;
+    text-align: center;
     
-    left: 5px;
-    right: 10px;
     color: white;
 }
 
 .card-text3{
     position: relative;
-    top:10px;
+    margin: 10px;
+    text-align: center;
     
-    left: 5px;
-    right: 10px;
     color: white;
 }
 
 .ans3{
-    font-size:smaller;
-    position:absolute;
-    bottom: 35px;
-    left: 20px;
-    right: 20px;
-    color: orange;
+    
+    position:relative;
+    margin: 10px;
+    text-align: center;
+    
 
+}
+.ans3 p{
+    color: #9b6234;
 }
 
 .ans2{
-    font-size:smaller;
-    position:absolute;
-    bottom: 5px;
-    left: 20px;
-    right: 20px;
-    color: orange;
+   
+    position:relative;
+    margin: 10px;
+    text-align: center;
 
+}
+
+.ans2 p{
+    color: #9b6234;
 }
 
 .ans1{
-    font-size:smaller;
-    position:absolute;
-    bottom: 55px;
-    left: 20px;
-    right: 20px;
-    color: orange;
+    
+    position:relative;
+    margin: 10px;
+    text-align: center;
 
 }
 
+.ans1 p{
+    color: #9b6234;
+}
+
 .ans{
-    font-size:smaller;
-    position:absolute;
-    bottom: 25px;
-    left: 20px;
-    right: 20px;
     
+    position:relative;
+    margin: 10px;
+    text-align: center;
     
-    color: orange;
+}
+
+.ans p{
+    color: #9b6234;
+    
 }
 
 .FAQs-area{
     justify-content: space-between;
     margin-block: 30px;
+}
+
+.test-section-container{
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.test-section{
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #9b6234;
+}
+
+.test-section-container p{
+    color: white;
+    margin-top: 20px;
+}
+
+.sub-footer{
+    background-color: orange;
+    padding: var(--padding-inline-section);
+
+}
+
+.sub-footer-container{
+    justify-content: center;
+    gap: 30px;
+    
 }
