@@ -111,3 +111,18 @@ body{
     bottom: 100px;
     right:40px
 }
+.signup-body p input[type="submit"]{
+    background: #FFA559;
+    border: none;
+    color:#ffffff ;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
+    cursor: pointer;
+    
+
+}
+
+.signup-body p input[type="submit"]:hover{
+    background: linear-gradient(to top left ,#3f8ebf,#b9dbae );
+    
+}
