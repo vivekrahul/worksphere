@@ -29,7 +29,7 @@ h2{
 
 }
 
-h2{
+h3{
     font-size: 1.5rem;
 }
 
@@ -45,10 +45,22 @@ a{
     display: inline-block;
 }
 
+ul{
+    list-style: none;
+}
+
+/* utility classes */
+
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 .container{
     max-width: 1180px;
     margin-inline:auto ;
     padding-inline: var(--padding-inline-section);
+    overflow: hidden;
 }
 
 .flex{
@@ -56,39 +68,15 @@ a{
     align-items: center;
 }
 
-ul{
-    list-style: none;
-}
-
-.company-logo{
-   height: 120px;
-    display: flex;
-}
-
-.main-nav{
-    margin-top: 20px;
-    justify-content: space-between;
-}
-
-.nav-links ul{
-    justify-content: end;
-    gap: 40px;
-}
-
-.nav-links{
-    flex-basis:730px ;
-    gap: 40px;
-}
-
 .hover-link{
     color: var(--primary-text-color);
-
+    transition: 0.2s ease-out;
 }
 
 .hover-link:hover{
     color: var(--accent-color);
-    transition: 0.2s ease-out;
 }
+
 
 .primary-button{
     background-color: var(--accent-color);
@@ -98,6 +86,7 @@ ul{
     padding: 12px 24px;
     box-shadow: 0 0 2px var(--secondary-text-color) ;
     transition: 0.2s ease-out;
+    text-align: center;
 
 }
 
@@ -121,9 +110,48 @@ ul{
     color: var(--accent-color)!important;
 }
 
+/* nav bar */
+.main-nav{
+    margin-top: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.company-logo img{
+   width: 200px;
+}
+
+.nav-links{
+    flex-basis:730px ;
+    
+}
+
+
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+/* header section */
+
+
+
+
+
+
+
+
+
+
+
+
 header{
     padding: 50px var(--padding-inline-section) 0 ;
-    display: flex;
+    
 }
 
 .header-section{
@@ -142,15 +170,17 @@ header{
     margin-top: 20px;
 }
 
+.get-started-btn{
+    margin-top: 20px;
+}
+
 .header-right img{
-    width: 600px;
+    width: 100%;
     
 
 }
 
-.get-started-btn{
-    margin-top: 20px;
-}
+/* companies section */
 
 .companies-header{
     text-align: center;
@@ -159,23 +189,29 @@ header{
 }
 
 .logos{
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap:wrap ;
+    gap: 20px;
 }
 
 .logo{
     height: 46px;
 }
 
+/* features section */
+
 .features-section{
     
     padding: 80px var(--padding-inline-section) 0;
+    
+
 }
 
 
 
 .features-header{
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .features-heading-text{
@@ -183,10 +219,11 @@ header{
 }
 
 .features-area{
-    margin-top: 20px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    margin-top: 20px;
+    
 }
 
 .features-card{
@@ -197,10 +234,12 @@ header{
 }
 
 .features-card img{
-    height: 20vh;
+    width: 60px;
     
     
 }
+
+/* big feature section */
 
 
 .big-feature-section{
@@ -209,6 +248,10 @@ header{
 
 .big-feature-container{
     gap: 30px;
+}
+
+#second-big-feature{
+    flex-direction: row-reverse;
 }
 
 .feature-img img{
@@ -220,131 +263,94 @@ header{
     align-items: flex-start;
 }
 
+/* Faqs section */
+
+.FAQs-section{
+    padding: 80px var(--padding-inline-section);
+}
+
 .FAQs-header{
     flex-direction: column;
     gap: 20px;
+    text-align: center;
 }
 
+
+
+.FAQs-area{
+    justify-content: space-between;
+    margin-block: 30px;
+    flex-wrap: wrap;
+}
 
 
 .FAQs-card{
 
     width: 23%;
     position: relative;
-    min-height: 300px;
-    background: rgb(24, 24, 24);
-    border-radius: 15px;
-    background: linear-gradient(to bottom , black, rgb(77, 74, 74));
+    height: 300px;
+    background: black;
+    
+    background: linear-gradient( rgb(0,0,0,0.1), rgb(0, 0, 0,0.8) ),url(https://images.pexels.com/photos/1848731/pexels-photo-1848731.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    transition: 0.2s ease-out;
+    
+}
+
+.FAQs-card:hover{
+    box-shadow: 0 0 10px #888;
+}
+
+.FAQs-card:nth-child(3){
+    background: linear-gradient( rgb(0,0,0,0.1), rgb(0, 0, 0,0.8)),url(https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=600) ;
+    background-size: cover;
+}
+
+.FAQs-card:nth-child(4){
+    background: linear-gradient( rgb(0,0,0,0.1), rgb(0, 0, 0,0.8)),url(https://images.pexels.com/photos/3943748/pexels-photo-3943748.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
 }
 
 .card-text{
-    margin: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
  
     
-    position: relative;
-   text-align: center;
-    
-    
-    color: white;
-
-}
-
-.card-text1{
-    position: relative;
-    margin: 10px;
-    text-align: center;
-    
-    color: white;
-}
-
-.card-text2{
-    position: relative;
-    margin: 10px;
-    text-align: center;
-    
-    color: white;
-}
-
-.card-text3{
-    position: relative;
-    margin: 10px;
-    text-align: center;
-    
-    color: white;
-}
-
-.ans3{
-    
-    position:relative;
-    margin: 10px;
-    text-align: center;
     
 
 }
-.ans3 p{
-    color: #9b6234;
-}
 
-.ans2{
-   
-    position:relative;
-    margin: 10px;
-    text-align: center;
 
-}
 
-.ans2 p{
-    color: #9b6234;
-}
+/* test section */
 
-.ans1{
-    
-    position:relative;
-    margin: 10px;
-    text-align: center;
-
-}
-
-.ans1 p{
-    color: #9b6234;
-}
-
-.ans{
-    
-    position:relative;
-    margin: 10px;
-    text-align: center;
-    
-}
-
-.ans p{
-    color: #9b6234;
-    
-}
-
-.FAQs-area{
-    justify-content: space-between;
-    margin-block: 30px;
+.test-section{
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #1d3557;
 }
 
 .test-section-container{
     flex-direction: column;
     gap: 30px;
     color: white;
+    text-align: center;
 }
 
-.test-section{
-    padding: 120px var(--padding-inline-section) 80px;
-    background-color: #9b6234;
-}
 
-.test-section-container p{
-    color: white;
+
+.test-section-container p {
+    color: white; 
     margin-top: 20px;
 }
 
+/* subfooter */
+
+
 .sub-footer{
-    background-color: orange;
+    background-color: var(--accent-color-dark);
     padding: var(--padding-inline-section);
 
 }
@@ -352,5 +358,9 @@ header{
 .sub-footer-container{
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
     
 }
+
+
+
